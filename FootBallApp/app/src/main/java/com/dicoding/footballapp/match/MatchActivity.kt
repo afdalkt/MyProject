@@ -16,7 +16,7 @@ class MatchActivity : AppCompatActivity(){
     class MatchActivityUI : AnkoComponent<MatchActivity>{
         override fun createView(ui: AnkoContext<MatchActivity>): View {
             return with(ui){
-                relativeLayout {
+                linearLayout {
                     lparams(width = matchParent, height = wrapContent)
 
                     frameLayout {
@@ -25,9 +25,11 @@ class MatchActivity : AppCompatActivity(){
                         width = matchParent
                         height = wrapContent
                     }
-                }.view()
+                }
             }
         }
-
+    }
+    companion object {
+        val fragmentHolder = 1
     }
 }

@@ -51,8 +51,6 @@ class MatchListUi : AnkoComponent<Context> {
 
                 }
             }
-
-
         }
     }
 }

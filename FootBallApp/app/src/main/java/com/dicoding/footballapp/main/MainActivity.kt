@@ -12,6 +12,7 @@ import android.widget.*
 import com.dicoding.footballapp.R
 import com.dicoding.footballapp.R.color.colorAccent
 import com.dicoding.footballapp.api.ApiRespository
+import com.dicoding.footballapp.match.MatchActivity
 import com.dicoding.footballapp.match.MatchFragment
 import com.dicoding.footballapp.model.Team
 import com.dicoding.footballapp.util.invisible
@@ -54,7 +55,7 @@ class MainActivity : AppCompatActivity(), MainView {
 
                     listTeam = recyclerView {
                         lparams(width = matchParent, height = wrapContent)
-                        layoutManager = LinearLayoutManager(context)
+                        layoutManager = LinearLayoutManager(context) as RecyclerView.LayoutManager?
                     }
 
                     progressBar = progressBar {
@@ -120,7 +121,7 @@ class MainActivity : AppCompatActivity(), MainView {
         if (id == R.id.lastMatch){
             supportFragmentManager
                 .beginTransaction()
-                .replace(R.id.fragmentHolder, MatchFragment.lastInstance(isLastMatch = true))
+                .replace(MatchActivity.fragmentHolder, MatchFragment.lastInstance(isLastMatch = true))
                 .commit()
             return true
         }
@@ -128,7 +129,7 @@ class MainActivity : AppCompatActivity(), MainView {
         if (id == R.id.nextMatch){
             supportFragmentManager
                 .beginTransaction()
-                .replace(R.id.fragmentHolder, MatchFragment.nextInstance(isNextMatch = true))
+                .replace(MatchActivity.fragmentHolder, MatchFragment.nextInstance(isNextMatch = true))
                 .commit()
             return true
         }
