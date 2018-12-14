@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="eventDate" type="id"/>
+    <item name="homeTeamName" type="id"/>
+    <item name="homeTeamScore" type="id"/>
+    <item name="awayTeamScore" type="id"/>
+    <item name="awayTeamName" type="id"/>
+    <item name="fragment_holder" type="id"/>
+    <item name="bottom_layout" type="id"/>
+    <item name="list_event" type="id"/>
+</resources>
